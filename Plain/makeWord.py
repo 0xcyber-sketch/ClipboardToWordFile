@@ -3,6 +3,8 @@
 import docx
 import os
 
+
+
 def makeWordFile(path, clipboard):
     print("Hello")
     # Make a new docs
@@ -13,6 +15,8 @@ def makeWordFile(path, clipboard):
     font = style.font
     font.name = 'Arial'
 
+
+    # Add the string to the docs
     d.add_paragraph(clipboard)
 
     # Prompt user for name for new doc file
@@ -21,6 +25,5 @@ def makeWordFile(path, clipboard):
     # Saves the new document at the PATH
     new_path = os.path.join(path, name)
     new_path = new_path + ".docx"
-    print(new_path)
     d.save(new_path)
 

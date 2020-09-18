@@ -5,8 +5,9 @@ import createLog
 import getClipboard
 import makeWord
 
+
 def runProgram():
-    #Path for word docx
+    # Path for word docx
     while not os.path.exists("path.txt"):
         createLog.makeLog()
 
@@ -18,18 +19,9 @@ def runProgram():
 
     clipData = str(getClipboard.get_clipboard_text())
 
-    #Format clipdata
+    # Format clipdata
     clipDataList = clipData.split("'")
     clipData = clipDataList[1]
 
+    # Runs the makeWord script
     makeWord.makeWordFile(path, clipData)
-
-runProgram()
-
-
-
-
-
-
-
-

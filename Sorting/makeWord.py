@@ -6,7 +6,6 @@ import os
 import sorting
 
 def makeWordFile(path, clipboard):
-    print("Hello")
     # Make a new docs
     d = docx.Document()
 

@@ -6,7 +6,6 @@ import os
 
 
 def makeWordFile(path, clipboard):
-    print("Hello")
     # Make a new docs
     d = docx.Document()
 

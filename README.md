@@ -1,3 +1,3 @@
 # ClipboardToWordFile
- Copies the user current clipboard and converts it to a Word file. Currently only for windows. 
-I don't not know if the script works on other OS'.
+ Copies the user current clipboard and converts it to a Word file. ONLY works for windows systems at this time. 
+It has been confirmed that it does not work on Macs

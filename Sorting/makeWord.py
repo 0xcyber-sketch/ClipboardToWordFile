@@ -2,8 +2,8 @@
 
 import docx
 import os
-
 import sorting
+
 
 def makeWordFile(path, clipboard):
     # Make a new docs
@@ -14,7 +14,7 @@ def makeWordFile(path, clipboard):
     font = style.font
     font.name = 'Arial'
 
-    #Sort clipboard if necessary
+    # Sort clipboard if necessary
     clipboard = sorting.sorting(clipboard)
 
     # Add the string to the docs
@@ -27,4 +27,3 @@ def makeWordFile(path, clipboard):
     new_path = os.path.join(path, name)
     new_path = new_path + ".docx"
     d.save(new_path)
-

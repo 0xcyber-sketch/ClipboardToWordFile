@@ -4,7 +4,6 @@ import docx
 import os
 
 
-
 def makeWordFile(path, clipboard):
     # Make a new docs
     d = docx.Document()
@@ -13,7 +12,6 @@ def makeWordFile(path, clipboard):
     style = d.styles['Normal']
     font = style.font
     font.name = 'Arial'
-
 
     # Add the string to the docs
     d.add_paragraph(clipboard)
@@ -25,4 +23,3 @@ def makeWordFile(path, clipboard):
     new_path = os.path.join(path, name)
     new_path = new_path + ".docx"
     d.save(new_path)
-

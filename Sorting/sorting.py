@@ -31,9 +31,8 @@ def sorting(input):
         for i in range(1, len(newStringList)):
             string += newStringList[i]
 
-
-
-    # Check if the input contains  bullets (Does the as above just looking for bullets instead of digits
+    # Check if the input contains  bullets
+    # (Does the as above just looking for bullets instead of digits)
     elif hasBullet(input):
         stringList = re.split(r"•", input)
         for i in range(len(stringList)):
@@ -45,5 +44,5 @@ def sorting(input):
 
     else:
         string = input
-    #Return string
+    # Return string
     return string

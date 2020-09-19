@@ -3,7 +3,7 @@
 Aurhor/Credits: kichik : https://stackoverflow.com/a/23285159
 """
 
-#Setting up neccersary processes to get clipboard
+# Setting up neccersary processes to get clipboard
 import ctypes
 
 CF_TEXT = 1
@@ -15,7 +15,8 @@ kernel32.GlobalUnlock.argtypes = [ctypes.c_void_p]
 user32 = ctypes.windll.user32
 user32.GetClipboardData.restype = ctypes.c_void_p
 
-#Return clipboard
+
+# Return clipboard
 def get_clipboard_text():
     user32.OpenClipboard(0)
     try:
@@ -28,4 +29,3 @@ def get_clipboard_text():
             return value
     finally:
         user32.CloseClipboard()
-

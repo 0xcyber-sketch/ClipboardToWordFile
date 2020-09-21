@@ -4,14 +4,14 @@ file = "path.txt"
 
 
 # Creates an empty txt file called path.txt. In same directory as the file
-def makeLog():
+def makePath():
     with open(file, "w") as f:
         f.write("")
         f.close()
 
 
 # Open the path.txt and reads it data
-def openLog():
+def openPath():
     with open(file, "r") as f:
         data = f.read()
         f.close()
@@ -20,7 +20,7 @@ def openLog():
 
 
 # Updates the path.txt file
-def updateLog(newpath):
+def updatePath(newpath):
     with open(file, "a") as f:
         f.write(newpath)
         f.close()

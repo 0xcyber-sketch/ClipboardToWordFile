@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 
-import createLog
+import createPath
 import getClipboard
 import makeWord
 
@@ -9,13 +9,13 @@ import makeWord
 def runProgram():
     # Path for word docx
     while not os.path.exists("path.txt"):
-        createLog.makeLog()
+        createPath.makePath()
 
-    path = createLog.openLog()
+    path = createPath.openPath()
 
     if len(path) == 0:
         path = input("Input your desired path for your word file: ")
-        createLog.updateLog(path)
+        createPath.updatePath(path)
 
     clipData = str(getClipboard.get_clipboard_text())
 

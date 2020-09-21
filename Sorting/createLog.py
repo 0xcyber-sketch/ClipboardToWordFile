@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from os import path
-
 file = "path.txt"
 
 
@@ -11,6 +9,7 @@ def makeLog():
         f.write("")
         f.close()
 
+
 # Open the path.txt and reads it data
 def openLog():
     with open(file, "r") as f:
@@ -19,7 +18,8 @@ def openLog():
 
     return data
 
-#Updates the path.txt file
+
+# Updates the path.txt file
 def updateLog(newpath):
     with open(file, "a") as f:
         f.write(newpath)

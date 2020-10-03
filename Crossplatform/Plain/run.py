@@ -23,6 +23,8 @@ def runProgram():
 
     if len(path) == 0:
         path = input("Input your desired path for your word file: ")
+        if path == "":
+            path = os.path.dirname(os.path.abspath(__file__))
         createPath.updatePath(path)
 
     if "Mac" in current_platform or "Darwin" in current_platform:

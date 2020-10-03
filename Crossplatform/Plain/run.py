@@ -25,7 +25,7 @@ def runProgram():
         path = input("Input your desired path for your word file: ")
         createPath.updatePath(path)
 
-    if "Mac" in current_platform:
+    if "Mac" in current_platform or "Darwin" in current_platform:
         clipData = getClipBoardMac.getClipboardData()
         clipData = clipData.decode('UTF-8')
     elif "Windows" in current_platform:

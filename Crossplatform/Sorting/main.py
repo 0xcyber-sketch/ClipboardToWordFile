@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import run
-
+from .run import runProgram
 if __name__ == '__main__':
-    run.runProgram()
+    runProgram()

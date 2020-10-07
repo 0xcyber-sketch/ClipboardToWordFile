@@ -9,3 +9,5 @@ Setup:
 3. Type in a new path. Path for where the word file is to be stored.
 4. Run the script through the terminal
 
+This requires xclip on linux and pbpaste on Mac. However, Mac doesn't work yet.
+

@@ -8,15 +8,15 @@ Aurhor/Credits: kichik : https://stackoverflow.com/a/23285159
 
 #Return clipboard
 def get_clipboard_text():
-    import ctypes
+    from ctypes import windll, ctypes
 
     CF_TEXT = 1
 
-    kernel32 = ctypes.windll.kernel32
+    kernel32 = windll.kernel32
     kernel32.GlobalLock.argtypes = [ctypes.c_void_p]
     kernel32.GlobalLock.restype = ctypes.c_void_p
     kernel32.GlobalUnlock.argtypes = [ctypes.c_void_p]
-    user32 = ctypes.windll.user32
+    user32 = windll.user32
     user32.GetClipboardData.restype = ctypes.c_void_p
     user32.OpenClipboard(0)
     try:
